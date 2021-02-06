@@ -88,7 +88,7 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
 
         response = {
-            'Short url is': 'http://localhost:3003/' + short
+            'Short url is': f'http://localhost:{PORT}/' + short
         }
 
         self.wfile.write(json.dumps(response).encode())
